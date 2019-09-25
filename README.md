@@ -17,3 +17,6 @@ action "Lint" {
 ```
 
 For a full list of possible `args` checkout the [black docs](https://github.com/ambv/black#command-line-options).
+
+
+Code inspired by https://github.com/MarvinJWendt/run-node-formatter
