@@ -18,8 +18,8 @@ echo "## Login into git..."
 git config --global user.email "black_code_formatter@gmail.com"
 git config --global user.name "Black Code Formatter"
 
-echo "## Installing Black"
-pip install black
+# echo "## Installing Black"
+# pip install black
 echo "## Running Black Code Formatter"
 black $BLACK_ARGS
 

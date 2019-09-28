@@ -1,0 +1,11 @@
+name: "Black Code Formatter"
+description: "Formats code using black formatter on file change."
+author: "JNeeven"
+branding:
+  icon: award
+  color: orange
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.myInput }}
