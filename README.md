@@ -5,9 +5,9 @@ A GitHub action that runs [black code formatter](https://github.com/ambv/black) 
 ## Example Workflow
 
 ```workflow
-name: Black Code Formatting on PR
+name: Black Code Formatting
 
-on: [pull_request]
+on: [push]
 
 jobs:
   pr-lint:
@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         name: Checkout
-      - uses: Ahuge/black-action@v1.0.2
+      - uses: prrao1/black-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BLACK_ARGS: "."
