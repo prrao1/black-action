@@ -36,6 +36,6 @@ black $BLACK_ARGS
 echo "## Staging changes..."
 git add .
 echo "## Commiting files..."
-git commit -m "Black Automatically Formatted Code" || true
+git commit -m "Format code automatically using Black" || true
 echo "## Pushing to $BRANCH"
 git push -u origin $BRANCH
