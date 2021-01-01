@@ -1,12 +1,14 @@
-on: push
-name: Black Code Formatter
+name: Black Code Formatting
+
+on: [push]
+
 jobs:
-  lint:
-    name: Black Code Formatter
+  pr-lint:
     runs-on: ubuntu-latest
     steps:
-    - name: Black Code Formatter
-      uses: lgeiger/black-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BLACK_ARGS: "."
+      - uses: actions/checkout@v2
+        name: Checkout
+      - uses: prrao1/black-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BLACK_ARGS: "."
