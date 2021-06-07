@@ -16,10 +16,10 @@ if ! git remote | grep "origin" > /dev/null 2>&1
 then 
   echo "### Adding git remote..."
   git remote add origin $REMOTE_TOKEN_URL
+  echo "### git fetch..."
+  git fetch
 fi
 
-echo "### git fetch..."
-git fetch
 git remote set-url --push origin $REMOTE_TOKEN_URL
 
 BRANCH="$GITHUB_HEAD_REF"
